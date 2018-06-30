@@ -1,0 +1,8 @@
+* Read config options from a separate file (.env?) instead of in the code
+  * Look into using https://github.com/theskumar/python-dotenv
+* Handle phrases (multiple words with spaces)
+  * Correctly calculate the number of letters by stripping out any spaces in the word
+  * Print out the underscores with an extra space
+* When the user guesses it correctly, print out the display screen one more time with all the letters
+* When the user guesses a wrong letter, print a message saying it wasn't correct and say how many more tries they get
+* Check this into Github
