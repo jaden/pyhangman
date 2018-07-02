@@ -111,4 +111,3 @@ if too_many_guesses(guessed_letters):
 
 if guessed_word(word, word_displayed):
   print("\n%s - You guessed it!" % word)
-

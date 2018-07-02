@@ -10,12 +10,14 @@ Python 2.x or 3.x
 
 At the top of the Python file there's a configuration section with the following options to configure.
 
-*WORDS_FILE* - The file containing a list of words
-*GUESSES* - The number of guesses the user is allowed before they're hung
-*MIN_WORD_LENGTH* - The minimum number of letters allowed in a word (used to filter out short words from the word list). Set to 0 to disable filtering by length
-*DEBUG* - Set to `True` to print debugging output, including the word to be guessed
+`WORDS_FILE` - The file containing a list of words
+
+`GUESSES` - The number of guesses the user is allowed before they're hung
+
+`MIN_WORD_LENGTH` - The minimum number of letters allowed in a word (used to filter out short words from the word list). Set to 0 to disable filtering by length
+
+`DEBUG` - Set to `True` to print debugging output, including the word to be guessed
 
 ## Usage
 
 Run `python hangman.py` and guess letters one at a time
-
