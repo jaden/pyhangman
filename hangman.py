@@ -44,10 +44,10 @@ def format_displayed_word(word_displayed):
   return ' '.join(word_displayed)
 
 def print_message(message):
-  print
-  print '=' * 40
-  print message
-  print '=' * 40
+  print()
+  print(('=' * 40))
+  print(message)
+  print(('=' * 40))
 
 def valid_guess(letter):
   if letter == '':
@@ -77,14 +77,14 @@ remaining_letters = list(string.ascii_lowercase)
 
 word = pick_word()
 debug("Shhh, the word is %s" % word)
-print("The word has %d letters\n" % word_length(word))
+print(("The word has %d letters\n" % word_length(word)))
 word_displayed = list('_' * len(word))
 
 while not is_game_done(guessed_letters, word, word_displayed):
-  print "\n%s\t\tIncorrect guesses: %s" % (format_displayed_word(word_displayed), ''.join(guessed_letters))
-  print "%s\t\tRemaining letters: %s\n" % ('  ' * (len(word) - 1), ''.join(remaining_letters))
+  print(("\n%s\t\tIncorrect guesses: %s" % (format_displayed_word(word_displayed), ''.join(guessed_letters))))
+  print(("%s\t\tRemaining letters: %s\n" % ('  ' * (len(word) - 1), ''.join(remaining_letters))))
 
-  letter = raw_input("Guess a letter (%d left): " % remaining_guesses(guessed_letters))
+  letter = input("Guess a letter (%d left): " % remaining_guesses(guessed_letters))
 
   if not valid_guess(letter):
     continue
@@ -101,13 +101,13 @@ while not is_game_done(guessed_letters, word, word_displayed):
 
 if too_many_guesses(guessed_letters):
   print_message("Sorry, you're out of guesses")
-  print "The word was: %s" % word
-  print "   |"
-  print "   |"
-  print "   O"
-  print "  /|\\"
-  print "   |"
-  print " _/ \\_"
+  print(("The word was: %s" % word))
+  print("   |")
+  print("   |")
+  print("   O")
+  print("  /|\\")
+  print("   |")
+  print(" _/ \\_")
 
 if guessed_word(word, word_displayed):
-  print("\n%s - You guessed it!" % word)
+  print(("\n%s - You guessed it!" % word))
